@@ -1,0 +1,152 @@
+/*Fonts*/
+@font-face {
+    font-family: Poppins;
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+body {
+    margin: 0;
+}
+header {
+    width: 100%;
+    height: 65px;
+    background-color: #191919;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;   
+    position: fixed;
+    z-index: 100;
+}
+nav {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav a {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 12px;
+    text-decoration: none;
+    position: relative;
+}
+nav a:after {    
+    background: none repeat scroll 0 0 transparent;
+    bottom: -3px;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+nav a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+nav img {
+    height: 40px;
+    width: auto;
+}
+main {
+    display: grid;
+    column-gap: 0;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: start ;
+}
+main figure {
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+.imgCont {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.imgCont:hover .bgPanel {
+    opacity: 1;
+}
+.imgCont:hover .usrCnt {
+    opacity: 1;
+}
+.bgPanel {
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 500ms ease;
+}
+.usrCnt {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+.cntInf {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    bottom: 15px;
+    left: 15px;
+}
+.pfpUsr {
+    width: 35px;
+    height: 35px;
+}
+.pfpUsr img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.nmUsr {
+    width: calc(100% - 35px);
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    left: 50px;
+    font-family: Poppins;
+    font-size: 12px;
+    top: 0;
+}
+.nmUsr a {
+    color: #fff;
+    text-decoration: none;
+}
+main figure img {
+    width: inherit;
+    height: inherit;
+    vertical-align: top;
+}
+.rd1 {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0;
+}
+@media only screen and (max-width: 1024px) {
+    header {
+        bottom: 0;
+    }
+    main {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media only screen and (max-width: 375px) {
+    main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .hdrTxt{
+        display: none;
+    }
+}
