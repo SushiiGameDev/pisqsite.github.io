@@ -31,9 +31,9 @@ nav a {
     text-decoration: none;
     position: relative;
 }
-nav a:after {    
+.hdrTxt:after {    
     background: none repeat scroll 0 0 transparent;
-    bottom: -3px;
+    bottom: 10px;
     content: "";
     display: block;
     height: 2px;
@@ -43,7 +43,7 @@ nav a:after {
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }
-nav a:hover:after { 
+.hdrTxt:hover:after { 
     width: 100%; 
     left: 0; 
 }
@@ -55,12 +55,18 @@ main {
     display: grid;
     column-gap: 0;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    align-items: start ;
+    align-items: start;
+    position: absolute;
+    top: 65px;
 }
 main figure {
     width: 100%;
     margin: 0;
     position: relative;
+}
+.navIcons {
+    display: none;
+    font-size: 35px;
 }
 .imgCont {
     width: 100%;
@@ -135,26 +141,43 @@ main figure img {
     row-gap: 0;
 }
 @media screen and (min-width: 1024px) {
-    header {
-        top: 0;
-    }
-    main {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+    .navIcons {
+        display: none !important;
     }
 }
-@media screen and (max-width: 1023px) and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1023px) {
     header {
         bottom: 0;
     }
     main {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        top: 0;
+    }
+    nav {
+        width: 100%;
+    }
+    .navIcons {
+        display: none !important;
     }
 }
-@media screen and (min-width: 767px) {
+@media screen and (max-width: 767px) {
     main {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        top: 0;
+    }
+    header {
+        bottom: 0;
+    }
+    nav {
+        width: 100%;
     }
     .hdrTxt{
+        display: none;
+    }
+    .navIcons {
+        display: inline;
+    }
+    #pisqLogo {
         display: none;
     }
 }
