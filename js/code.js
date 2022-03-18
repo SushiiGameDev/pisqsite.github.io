@@ -1,7 +1,6 @@
 let clms = document.querySelectorAll(".rxt");
 const lngt = clms.length;
 let rsm = true;
-console.log(clms[1]);
 let columns = [document.getElementById("frstclm"), document.getElementById("scnclm"), document.getElementById("trdclm")];
 window.addEventListener("resize", function() {
     if((this.innerWidth < 1024 && this.innerWidth < this.innerHeight) && rsm == true) {
