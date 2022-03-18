@@ -134,7 +134,7 @@ main figure img {
     grid-template-columns: minmax(0, 1fr);
     row-gap: 0;
 }
-@media only screen and (max-width: 1023px) and (min-width: 768px) {
+@media screen and (max-width: 1023px) and (min-width: 768px) {
     header {
         bottom: 0;
     }
@@ -142,7 +142,7 @@ main figure img {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
-@media only screen and (min-width: 767px) {
+@media screen and (min-width: 767px) {
     main {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
