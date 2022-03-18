@@ -66,7 +66,7 @@ main figure {
 }
 .navIcons {
     display: none;
-    font-size: 35px;
+    font-size: 25px;
 }
 .imgCont {
     width: 100%;
@@ -179,5 +179,11 @@ main figure img {
     }
     #pisqLogo {
         display: none;
+    }
+    #trdclm {
+        margin-bottom: 65px;
+    }
+    #lstclm {
+        margin-bottom: 65px;
     }
 }
