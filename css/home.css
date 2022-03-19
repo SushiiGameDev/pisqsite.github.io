@@ -81,6 +81,9 @@ main figure {
 .imgCont:hover .usrCnt {
     opacity: 1;
 }
+figure:hover {
+    cursor: pointer;
+}
 .bgPanel {
     background-color: rgba(0, 0, 0, 0.6);
     opacity: 0;
@@ -139,6 +142,9 @@ main figure img {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     row-gap: 0;
+}
+.navIconsDea {
+    color: red !important;
 }
 @media screen and (min-width: 1024px) {
     .navIcons {
