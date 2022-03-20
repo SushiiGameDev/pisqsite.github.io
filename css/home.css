@@ -30,6 +30,10 @@ nav a {
     font-size: 12px;
     text-decoration: none;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .hdrTxt:after {    
     background: none repeat scroll 0 0 transparent;
@@ -42,10 +46,6 @@ nav a {
     background: #fff;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
-}
-.hdrTxt:hover:after { 
-    width: 100%; 
-    left: 0; 
 }
 nav img {
     height: 40px;
@@ -144,11 +144,15 @@ main figure img {
     row-gap: 0;
 }
 .navIconsDea {
-    color: red !important;
+    color: #afafaf !important;
 }
 @media screen and (min-width: 1024px) {
     .navIcons {
         display: none !important;
+    }
+    .hdrTxt:hover:after { 
+        width: 100%; 
+        left: 0; 
     }
 }
 @media screen and (min-width: 768px) and (max-width: 1023px) {
@@ -168,7 +172,7 @@ main figure img {
 }
 @media screen and (max-width: 767px) {
     main {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         top: 0;
     }
     header {
@@ -177,11 +181,12 @@ main figure img {
     nav {
         width: 100%;
     }
-    .hdrTxt{
-        display: none;
-    }
     .navIcons {
         display: inline;
+        text-align: center;
+    }
+    .hdrTxt {
+        margin: 0;
     }
     #pisqLogo {
         display: none;
